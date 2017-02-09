@@ -42,22 +42,33 @@
         android:hint="0000-0000"
         android:textAlignment="center" />
 
-    <Button
-        android:text="Comprobar SMS"
-        android:layout_width="wrap_content"
+    <TextView
+        android:text="Esperando a recibir el SMS para validar la cuenta."
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button"
         android:layout_below="@+id/inCode"
         android:layout_centerHorizontal="true"
-        style="@style/Widget.AppCompat.Button.Colored" />
-
-    <TextView
-        android:text='Pulse "Comprobar SMS" para ver si le ha llegado el SMS con el código de activación.'
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_marginTop="14dp"
         android:id="@+id/textView3"
         android:textAlignment="center" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/verificationOK"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/holo_green_dark" />
+
 </RelativeLayout>
